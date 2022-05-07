@@ -9,21 +9,21 @@
 
 ## About Laravel
 
-Setup Step
+Setup Step<br><br><br>
 
 
-// clone to the developer
-Step-1 = git clone "url"
-step-2 = composer update
+// clone to the developer<br>
+Step-1 = git clone "url"<br>
+step-2 = composer update<br>
 
 New branch
 
-git checkout development
-git pull origin development
-git checkout -b "tasknumber"
-git checkout tasknumber
-//start work on branch
-git add filename
-git commit -m "comment"
-git push -u origin 'tasknumber'
+git checkout development<br>
+git pull origin development<br>
+git checkout -b "tasknumber"<br>
+git checkout tasknumber<br>
+//start work on branch<br>
+git add filename<br>
+git commit -m "comment"<br>
+git push -u origin 'tasknumber'<br>
 // create pr
