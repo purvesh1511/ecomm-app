@@ -165,7 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
-
+        //Custom
+        App\Providers\HelperServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Application Service Providers...
          */

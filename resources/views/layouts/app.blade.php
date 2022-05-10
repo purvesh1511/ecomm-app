@@ -76,6 +76,7 @@
         </nav>
 
         <main class="py-4">
+            <x-admin.flash-message />
             @yield('content')
         </main>
     </div>

@@ -1,5 +1,6 @@
 <?php
 
+// use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('/test', function (UserRepository $userRepository) {
+//     dd($userRepository->findById(1));
+// });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Admin Routes
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::resource('users',UserController::class);
+    Route::controller(UserController::class)->group(function () {
+        Route::get('profile', 'show');
+    });
+});
