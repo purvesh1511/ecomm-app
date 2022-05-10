@@ -12,34 +12,30 @@ class BaseRepository
     }
     public function getAll()
     {
-        try {
-            return $this->modal->all();
-        } catch (\Exception $e) {
-            log_error($e);
-        }
+        return $this->model->all();
     }
+
     public function getPaginate()
     {
-        try {
-            return $this->modal->paginate(15);
-        } catch (\Exception $e) {
-            log_error($e);
-        }
+        return $this->modal->paginate(15);
     }
+
+    public function create(array $data){
+        return $this->model->create($data);
+    }
+
+    public function update($id, array $data)
+    {
+        return $this->model->find($id)->update($data);
+    }
+    
     public function findById($id)
     {
-        try {
-            return $this->modal->findOrFail($id);
-        } catch (\Exception $e) {
-            log_error($e);
-        }
+        return $this->model->findorFail($id);
     }
+
     public function delete($id)
     {
-        try {
-            return $this->modal->delete($id);
-        } catch (\Exception $e) {
-            log_error($e);
-        }
+        return $this->modal->delete($id);
     }
 }
