@@ -1,6 +1,5 @@
 <?php
 
-// use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-// Route::get('/test', function (UserRepository $userRepository) {
-//     dd($userRepository->findById(1));
-// });
 
 Auth::routes();
 

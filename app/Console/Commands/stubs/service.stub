@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+use App\Repositories\{{ class }}Repository;
+
+class {{ class }}Service
+{
+    /**
+     * @var ${{ class }}Repository
+     */
+    protected ${{ class }}Repository;
+
+    public function __construct({{ class }}Repository ${{ class }}Repository)
+    {
+        $this->{{ class }}Repository = ${{ class }}Repository;
+    }
+}
