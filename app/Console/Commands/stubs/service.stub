@@ -3,9 +3,10 @@
 namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Model;
+use App\Services\BaseService;
 use App\Repositories\{{ class }}Repository;
 
-class {{ class }}Service
+class {{ class }}Service extends BaseService
 {
     /**
      * @var ${{ class }}Repository
